@@ -3,6 +3,8 @@ export interface ProjectCardProps {
   description: string;
   imageUrl: string;
   projectUrl: string;
+  imageHeight?: string;
+  textHeight?: string;
 }
 
 export default function ProjectCard({
@@ -10,11 +12,13 @@ export default function ProjectCard({
   description,
   imageUrl,
   projectUrl,
+  imageHeight = 'h-40',
+  textHeight = 'h-12',
 }: ProjectCardProps) {
   return (
     <div className="flex-shrink-0 w-full sm:w-80 rounded-lg border border-black/[.08] dark:border-white/[.145] overflow-hidden transition-all hover:border-black/[.2] dark:hover:border-white/[.3] hover:shadow-lg flex flex-col">
       {/* Image Box */}
-      <div className="w-full h-40 bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center">
+      <div className={`w-full ${imageHeight} bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center`}>
         {imageUrl ? (
           <img
             src={imageUrl}
@@ -40,7 +44,7 @@ export default function ProjectCard({
       </div>
 
       {/* Text Box */}
-      <div className="w-full h-12 flex items-center justify-center text-center">
+      <div className={`w-full ${textHeight} flex items-center justify-center text-center`}>
         <p className="text-sm text-zinc-400 dark:text-zinc-600">placeholder</p>
       </div>
     </div>

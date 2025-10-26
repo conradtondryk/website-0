@@ -54,7 +54,8 @@ export default function Home() {
           <Carousel
             projects={projects}
             width="w-full"
-            height="h-64"
+            imageHeight="h-40"
+            textHeight="h-12"
           />
         </div>
       </main>

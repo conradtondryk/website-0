@@ -6,13 +6,15 @@ import ProjectCard, { ProjectCardProps } from './ProjectCard';
 interface CarouselProps {
   projects: ProjectCardProps[];
   width?: string;
-  height?: string;
+  imageHeight?: string;
+  textHeight?: string;
 }
 
 export default function Carousel({
   projects,
   width = 'w-full',
-  height = 'h-64',
+  imageHeight = 'h-40',
+  textHeight = 'h-12',
 }: CarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -42,7 +44,7 @@ export default function Carousel({
 
   if (projects.length === 0) {
     return (
-      <div className={`${width} ${height} flex items-center justify-center border border-dashed border-black/[.08] dark:border-white/[.145] rounded-lg`}>
+      <div className={`${width} h-64 flex items-center justify-center border border-dashed border-black/[.08] dark:border-white/[.145] rounded-lg`}>
         <p className="text-zinc-400 dark:text-zinc-600">No projects yet</p>
       </div>
     );
@@ -76,7 +78,7 @@ export default function Carousel({
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} />
+          <ProjectCard key={index} {...project} imageHeight={imageHeight} textHeight={textHeight} />
         ))}
       </div>
 
