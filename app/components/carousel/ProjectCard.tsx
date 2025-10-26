@@ -50,7 +50,7 @@ export default function ProjectCard({
 
       {/* Text Box */}
       <div className={`w-full ${textHeight} flex items-center justify-center text-center select-none`}>
-        <p className="text-sm text-zinc-400 dark:text-zinc-600">{title}</p>
+        <p className="text-sm text-black dark:text-zinc-50">{title}</p>
       </div>
     </div>
   );

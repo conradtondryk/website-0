@@ -6,7 +6,7 @@ export default function Home() {
   const projects = [
     {
       title: "advent of code.",
-      imageUrl: "",
+      imageUrl: "/advent-code.png",
       projectUrl: "https://github.com/conradtondryk/advent",
     },
     {
