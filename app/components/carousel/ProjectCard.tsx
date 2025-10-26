@@ -1,6 +1,5 @@
 export interface ProjectCardProps {
   title: string;
-  description: string;
   imageUrl: string;
   projectUrl: string;
   imageHeight?: string;
@@ -10,7 +9,6 @@ export interface ProjectCardProps {
 
 export default function ProjectCard({
   title,
-  description,
   imageUrl,
   projectUrl,
   imageHeight = 'h-40',
@@ -52,7 +50,7 @@ export default function ProjectCard({
 
       {/* Text Box */}
       <div className={`w-full ${textHeight} flex items-center justify-center text-center select-none`}>
-        <p className="text-sm text-zinc-400 dark:text-zinc-600">placeholder</p>
+        <p className="text-sm text-zinc-400 dark:text-zinc-600">{title}</p>
       </div>
     </div>
   );
