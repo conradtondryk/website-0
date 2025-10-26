@@ -58,6 +58,7 @@ export default function Home() {
             width="w-full"
             imageHeight="h-40"
             textHeight="h-12"
+            cardWidth="w-52"
           />
         </div>
       </main>
