@@ -8,7 +8,7 @@ export default function Home() {
       title: "",
       description: "",
       imageUrl: "",
-      projectUrl: "",
+      projectUrl: "https://github.com/conradtondryk/advent",
     },
     {
       title: "",
@@ -29,9 +29,10 @@ export default function Home() {
       <main className="flex min-h-screen w-full max-w-3xl flex-col pt-8 pb-32 px-16 bg-white dark:bg-black">
         <div className="flex flex-col items-center sm:items-start">
           <SocialButtons
-            githubUrl=""
-            linkedInUrl=""
-            emailUrl=""
+            githubUrl="https://github.com/conradtondryk"
+            linkedInUrl="https://www.linkedin.com/in/conrad-tondryk/"
+            emailUrl="mailto:konradtondryk@gmail.com"
+
             cvUrl=""
           />
           <div className="w-full border-t border-black/[.08] dark:border-white/[.145] my-4"></div>
