@@ -39,11 +39,11 @@ export default function Home() {
           <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
             conrad tondryk
           </h1>
-          <p className="max-w-md text-sm leading-6 text-black  ">
+          <p className="max-w-md text-sm leading-6 text-black dark:text-zinc-50">
             rust, next.js, react.
 
           </p>
-          <p className="max-w-md text-sm leading-6 text-black ">
+          <p className="max-w-md text-sm leading-6 text-black dark:text-zinc-50">
             i'm a software engineer, experienced in rust and next.js. check out my projects below, or contact me if you need my services.
           </p>
         </div>

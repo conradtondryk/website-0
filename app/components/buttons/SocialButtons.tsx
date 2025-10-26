@@ -1,7 +1,10 @@
+'use client';
+
 import GithubButton from './GithubButton';
 import LinkedInButton from './LinkedInButton';
 import EmailButton from './EmailButton';
 import DownloadCVButton from './DownloadCVButton';
+import ThemeToggleButton from './ThemeToggleButton';
 
 interface SocialButtonsProps {
   githubUrl?: string;
@@ -18,6 +21,7 @@ export default function SocialButtons({
 }: SocialButtonsProps) {
   return (
     <div className="flex gap-4 items-center justify-center sm:justify-start">
+      <ThemeToggleButton />
       <GithubButton href={githubUrl} />
       <LinkedInButton href={linkedInUrl} />
       <EmailButton href={emailUrl} />
