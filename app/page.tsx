@@ -5,20 +5,17 @@ import Carousel from "./components/carousel/Carousel";
 export default function Home() {
   const projects = [
     {
-      title: "",
-      description: "",
+      title: "advent of code.",
       imageUrl: "",
       projectUrl: "https://github.com/conradtondryk/advent",
     },
     {
       title: "",
-      description: "",
       imageUrl: "",
       projectUrl: "",
     },
     {
       title: "",
-      description: "",
       imageUrl: "",
       projectUrl: "",
     },
