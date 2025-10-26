@@ -50,6 +50,8 @@ export default function Home() {
           </p>
         </div>
 
+        <div className="w-full border-t border-black/[.08] dark:border-white/[.145] my-4"></div>
+
         <div className="mt-12">
           <Carousel
             projects={projects}
