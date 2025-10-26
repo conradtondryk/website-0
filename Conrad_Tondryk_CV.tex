@@ -1,0 +1,174 @@
+%-------------------------
+% Resume in LaTeX
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.01\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape Conrad Tondryk} \\ \vspace{5pt}
+    \small
+    \href{mailto:konradtondryk@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{konradtondryk@gmail.com}} ~
+    \href{https://www.linkedin.com/in/conrad-tondryk/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/conrad-tondryk}} ~
+    \href{https://github.com/conradtondryk}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/conradtondryk}}
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Bishop Luffa CofE Sixth Form}{2020 -- 2022}
+      {3 A levels}{}
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{Work Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Bar Manager}{April 2023}
+      {The Vestry}{}
+      \resumeItemListStart
+        \resumeItem{Overwhelmingly successful event planning, with events generating up to 80\% more revenue than in previous dates}
+        \resumeItem{Accurate sales forecasting and improvements to forecasting protocols}
+        \resumeItem{Reducing stock wastage by 50\%, and holding days from 21 to 12}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Bartender}{September 2021}
+      {The Vestry}{}
+      \resumeItemListStart
+        \resumeItem{Consistently highest sales per hour}
+        \resumeItem{Consistently lowest mistake rate on Aztec till system}
+    \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+\vspace{-16pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programming}{: Experience in programming in Rust and Next.js} \\
+     \textbf{AI \& Learning}{: Effectively using AI to learn (from programming to general skills)} \\
+     \textbf{Version Control}{: Git and Github} \\
+     \textbf{Teamwork}{: Working in team environments effectively and enthusiastically} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{TikTok Video Creator} $|$ \emph{Contributor}}{July 2025}
+          \resumeItemListStart
+            \resumeItem{Refactor code for readability and efficiency}
+            \resumeItem{Create additional script for creating a niche video type}
+          \resumeItemListEnd
+          \vspace{-13pt}
+    \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------MISCELLANEOUS-----------
+\section{Miscellaneous}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Music}{: Playing the Guitar, Grade 8} \\
+     \textbf{Sports}{: Competition shooting with Chichester RPC, reaching 3rd place in local competitions} \\
+     \textbf{Computing}{: Bebras Computational Thinking Challenges 2015--20, Gold in most years} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+\end{document}
