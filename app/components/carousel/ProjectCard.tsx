@@ -20,7 +20,12 @@ export default function ProjectCard({
   return (
     <div className={`flex-shrink-0 ${cardWidth} rounded-lg border border-black/[.08] dark:border-white/[.145] overflow-hidden transition-all hover:border-black/[.2] dark:hover:border-white/[.3] hover:shadow-lg flex flex-col`}>
       {/* Image Box */}
-      <div className={`w-full ${imageHeight} bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center`}>
+      <a
+        href={projectUrl}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={`w-full ${imageHeight} bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center cursor-pointer`}
+      >
         {imageUrl ? (
           <img
             src={imageUrl}
@@ -43,10 +48,10 @@ export default function ProjectCard({
             />
           </svg>
         )}
-      </div>
+      </a>
 
       {/* Text Box */}
-      <div className={`w-full ${textHeight} flex items-center justify-center text-center`}>
+      <div className={`w-full ${textHeight} flex items-center justify-center text-center select-none`}>
         <p className="text-sm text-zinc-400 dark:text-zinc-600">placeholder</p>
       </div>
     </div>
