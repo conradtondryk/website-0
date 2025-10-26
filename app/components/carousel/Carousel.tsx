@@ -8,6 +8,7 @@ interface CarouselProps {
   width?: string;
   imageHeight?: string;
   textHeight?: string;
+  cardWidth?: string;
 }
 
 export default function Carousel({
@@ -15,6 +16,7 @@ export default function Carousel({
   width = 'w-full',
   imageHeight = 'h-40',
   textHeight = 'h-12',
+  cardWidth = 'w-52',
 }: CarouselProps) {
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
@@ -78,7 +80,7 @@ export default function Carousel({
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} imageHeight={imageHeight} textHeight={textHeight} />
+          <ProjectCard key={index} {...project} imageHeight={imageHeight} textHeight={textHeight} cardWidth={cardWidth} />
         ))}
       </div>
 
