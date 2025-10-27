@@ -29,8 +29,7 @@ export default function Home() {
             githubUrl="https://github.com/conradtondryk"
             linkedInUrl="https://www.linkedin.com/in/conrad-tondryk/"
             emailUrl="mailto:konradtondryk@gmail.com"
-
-            cvUrl=""
+            cvUrl="/Conrad_Tondryk_CV.pdf"
           />
           <div className="w-full border-t border-black/[.08] dark:border-white/[.145] my-4"></div>
         </div>
