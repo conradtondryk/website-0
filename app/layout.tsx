@@ -17,7 +17,9 @@ export const metadata: Metadata = {
   title: "ctondryk.dev",
   description: "conrad tondryk's personal website",
   icons: {
-    icon: "/oaktree.svg",
+    icon: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
+    shortcut: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
   },
   openGraph: {
     images: ['/preview.jpg'],
