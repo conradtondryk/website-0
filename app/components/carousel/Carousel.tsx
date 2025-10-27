@@ -24,20 +24,39 @@ export default function Carousel({
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      // Get the first card to measure its width dynamically
-      const firstCard = scrollContainerRef.current.firstElementChild as HTMLElement;
-      if (!firstCard) return;
+      const container = scrollContainerRef.current;
+      const cards = Array.from(container.children) as HTMLElement[];
+      if (cards.length === 0) return;
 
-      const cardWidth = firstCard.offsetWidth;
+      const cardWidth = cards[0].offsetWidth;
       const gap = 16; // gap-4 = 16px
-      const scrollAmount = cardWidth + gap;
+      const containerWidth = container.offsetWidth;
 
-      const newScrollLeft =
-        scrollContainerRef.current.scrollLeft +
-        (direction === 'left' ? -scrollAmount : scrollAmount);
+      // Find the currently centered card (or closest to center)
+      const containerCenter = container.scrollLeft + containerWidth / 2;
+      let currentCardIndex = 0;
 
-      scrollContainerRef.current.scrollTo({
-        left: newScrollLeft,
+      for (let i = 0; i < cards.length; i++) {
+        const cardLeft = cards[i].offsetLeft;
+        const cardCenter = cardLeft + cardWidth / 2;
+        if (Math.abs(cardCenter - containerCenter) < cardWidth / 2 + gap) {
+          currentCardIndex = i;
+          break;
+        }
+      }
+
+      // Calculate target card index
+      const targetIndex = direction === 'left'
+        ? Math.max(0, currentCardIndex - 1)
+        : Math.min(cards.length - 1, currentCardIndex + 1);
+
+      // Calculate scroll position to center the target card
+      const targetCard = cards[targetIndex];
+      const targetCardLeft = targetCard.offsetLeft;
+      const targetScrollLeft = targetCardLeft - (containerWidth / 2) + (cardWidth / 2);
+
+      container.scrollTo({
+        left: targetScrollLeft,
         behavior: 'smooth',
       });
     }
