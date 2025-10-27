@@ -43,7 +43,7 @@ export default function Home() {
 
           </p>
           <p className="max-w-md text-sm leading-6 text-black dark:text-zinc-50">
-            i'm a software engineer, experienced in rust and next.js. check out my projects below, or contact me if you need my services.
+            i'm a software engineer, using rust and next.js. check out my projects below, or feel free to contact me.
           </p>
         </div>
 

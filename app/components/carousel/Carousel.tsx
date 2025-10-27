@@ -24,7 +24,14 @@ export default function Carousel({
 
   const scroll = (direction: 'left' | 'right') => {
     if (scrollContainerRef.current) {
-      const scrollAmount = 340; // Slightly more than card width for smooth transition
+      // Get the first card to measure its width dynamically
+      const firstCard = scrollContainerRef.current.firstElementChild as HTMLElement;
+      if (!firstCard) return;
+
+      const cardWidth = firstCard.offsetWidth;
+      const gap = 16; // gap-4 = 16px
+      const scrollAmount = cardWidth + gap;
+
       const newScrollLeft =
         scrollContainerRef.current.scrollLeft +
         (direction === 'left' ? -scrollAmount : scrollAmount);
