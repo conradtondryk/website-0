@@ -76,7 +76,7 @@ export default function Carousel({
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth pl-4 pr-12 md:px-12"
+        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-0 md:px-12"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project, index) => (
