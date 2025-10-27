@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import SocialButtons from "./components/buttons/SocialButtons";
 import Carousel from "./components/carousel/Carousel";
 

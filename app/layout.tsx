@@ -19,6 +19,13 @@ export const metadata: Metadata = {
   icons: {
     icon: "/oaktree.svg",
   },
+  openGraph: {
+    images: ['/preview.jpg'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['/preview.jpg'],
+  },
 };
 
 export default function RootLayout({
