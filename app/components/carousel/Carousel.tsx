@@ -1,6 +1,6 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import ProjectCard, { ProjectCardProps } from './ProjectCard';
 
 interface CarouselProps {
@@ -62,13 +62,42 @@ export default function Carousel({
     }
   };
 
-  const handleScroll = () => {
+  const updateArrowVisibility = () => {
     if (scrollContainerRef.current) {
-      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current;
-      setShowLeftArrow(scrollLeft > 0);
-      setShowRightArrow(scrollLeft < scrollWidth - clientWidth - 10);
+      const container = scrollContainerRef.current;
+      const { scrollLeft, scrollWidth, clientWidth } = container;
+
+      // Check if there's any content cut off on the left
+      const hasContentOnLeft = scrollLeft > 1;
+
+      // Check if there's any content cut off on the right
+      const hasContentOnRight = scrollLeft < scrollWidth - clientWidth - 1;
+
+      // Only show arrows if content is actually being clipped
+      const isOverflowing = scrollWidth > clientWidth;
+
+      setShowLeftArrow(isOverflowing && hasContentOnLeft);
+      setShowRightArrow(isOverflowing && hasContentOnRight);
     }
   };
+
+  const handleScroll = () => {
+    updateArrowVisibility();
+  };
+
+  useEffect(() => {
+    // Initial check
+    updateArrowVisibility();
+
+    // Update on window resize
+    const handleResize = () => {
+      updateArrowVisibility();
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [projects]);
 
   if (projects.length === 0) {
     return (
@@ -102,7 +131,7 @@ export default function Carousel({
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-0 md:px-12"
+        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-0 md:px-12 justify-center"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {projects.map((project, index) => (

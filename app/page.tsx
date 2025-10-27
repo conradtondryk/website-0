@@ -9,16 +9,7 @@ export default function Home() {
       imageUrl: "/advent-code.png",
       projectUrl: "https://github.com/conradtondryk/advent",
     },
-    {
-      title: "",
-      imageUrl: "",
-      projectUrl: "",
-    },
-    {
-      title: "",
-      imageUrl: "",
-      projectUrl: "",
-    },
+
   ];
 
   return (
