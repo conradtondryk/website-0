@@ -6,7 +6,7 @@ export default function EmailButton({ href }: { href: string }) {
       aria-label="Email"
     >
       <svg
-        className="h-5 w-5 dark:invert"
+        className="h-5 w-5 text-black dark:text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
