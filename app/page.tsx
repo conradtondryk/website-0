@@ -9,7 +9,11 @@ export default function Home() {
       imageUrl: "/advent-code.png",
       projectUrl: "https://github.com/conradtondryk/advent",
     },
-
+    {
+      title: "cli todo list.",
+      imageUrl: "",
+      projectUrl: "https://github.com/conradtondryk/todo-project",
+    },
   ];
 
   return (
