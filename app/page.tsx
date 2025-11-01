@@ -6,8 +6,22 @@ export default function Home() {
   const projects = [
     {
       title: "advent of code.",
-      imageUrl: "/advent-code.png",
+      imageUrl: "",
       projectUrl: "https://github.com/conradtondryk/advent",
+      asciiArt: `
+         ★
+        >o<
+       >o*o<
+      >o*o*o<
+     >o*o*o*o<
+    >o*o*o*o*o<
+   >o*o*o*o*o*o<
+  >o*o*o*o*o*o*o<
+ >o*o*o*o*o*o*o*o<
+        |||
+        |||
+       [___]
+`
     },
     {
       title: "cli todo list.",

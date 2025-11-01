@@ -5,6 +5,7 @@ export interface ProjectCardProps {
   imageHeight?: string;
   textHeight?: string;
   cardWidth?: string;
+  asciiArt?: string;
 }
 
 export default function ProjectCard({
@@ -14,6 +15,7 @@ export default function ProjectCard({
   imageHeight = 'h-40',
   textHeight = 'h-12',
   cardWidth = 'w-52',
+  asciiArt,
 }: ProjectCardProps) {
   return (
     <div className={`flex-shrink-0 ${cardWidth} rounded-lg border border-black/[.08] dark:border-white/[.145] overflow-hidden transition-all hover:border-black/[.2] dark:hover:border-white/[.3] hover:shadow-lg flex flex-col`}>
@@ -24,7 +26,11 @@ export default function ProjectCard({
         rel="noopener noreferrer"
         className={`w-full ${imageHeight} bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center cursor-pointer`}
       >
-        {imageUrl ? (
+        {asciiArt ? (
+          <pre className="text-[8px] leading-[0.9] text-green-600 dark:text-green-400 font-mono whitespace-pre overflow-hidden flex items-center justify-center p-2">
+            {asciiArt}
+          </pre>
+        ) : imageUrl ? (
           <img
             src={imageUrl}
             alt={title}
