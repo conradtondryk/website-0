@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://ctondryk.dev'),
-  title: "ctondryk.dev",
+  title: "conrad tondryk",
   description: "conrad tondryk's personal website",
   icons: {
     icon: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     apple: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
   },
   openGraph: {
-    title: "ctondryk.dev",
+    title: "conrad tondryk",
     description: "conrad tondryk's personal website",
     images: [{
       url: '/preview.jpg',
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "ctondryk.dev",
+    title: "conrad tondryk",
     description: "conrad tondryk's personal website",
     images: ['/preview.jpg'],
   },
