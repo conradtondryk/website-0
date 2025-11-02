@@ -131,11 +131,21 @@ export default function Carousel({
       <div
         ref={scrollContainerRef}
         onScroll={handleScroll}
-        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-0 md:px-12 justify-center"
-        style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth px-0 md:px-12"
+        style={{
+          scrollbarWidth: 'none',
+          msOverflowStyle: 'none',
+          scrollSnapType: 'x mandatory'
+        }}
       >
         {projects.map((project, index) => (
-          <ProjectCard key={index} {...project} imageHeight={imageHeight} textHeight={textHeight} cardWidth={cardWidth} />
+          <div
+            key={index}
+            className="flex-shrink-0 w-full flex justify-center md:w-auto md:block"
+            style={{ scrollSnapAlign: 'center' }}
+          >
+            <ProjectCard {...project} imageHeight={imageHeight} textHeight={textHeight} cardWidth={cardWidth} />
+          </div>
         ))}
       </div>
 
