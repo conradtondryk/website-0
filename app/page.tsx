@@ -27,6 +27,14 @@ export default function Home() {
       title: "cli todo list.",
       imageUrl: "",
       projectUrl: "https://github.com/conradtondryk/todo-project",
+      asciiArt: `
+┌─────────────────────────┐
+│ [ ] 1. task one         │
+│ [✓] 2. task two         │
+│ [ ] 3. task three       │
+└─────────────────────────┘
+    cli todo list.
+`
     },
   ];
 
