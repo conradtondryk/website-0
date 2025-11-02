@@ -1,8 +1,21 @@
+'use client';
 
+import { useState } from "react";
 import SocialButtons from "./components/buttons/SocialButtons";
 import Carousel from "./components/carousel/Carousel";
+import ProjectModal, { ModalButton } from "./components/ProjectModal";
 
 export default function Home() {
+  const [modalState, setModalState] = useState<{
+    isOpen: boolean;
+    title: string;
+    buttons: ModalButton[];
+  }>({
+    isOpen: false,
+    title: '',
+    buttons: []
+  });
+
   const projects = [
     {
       title: "advent of code.",
@@ -26,7 +39,24 @@ export default function Home() {
     {
       title: "cli todo list.",
       imageUrl: "",
-      projectUrl: "https://github.com/conradtondryk/todo-project",
+      onClick: () => setModalState({
+        isOpen: true,
+        title: 'CLI Todo List',
+        buttons: [
+          {
+            label: 'View on GitHub',
+            href: 'https://github.com/conradtondryk/todo-project',
+            external: true,
+            icon: 'github',
+            variant: 'primary'
+          },
+          {
+            label: 'Read Blog Post',
+            href: '/blog/todo-project',
+            variant: 'secondary'
+          }
+        ]
+      }),
       asciiArt: `
   [ ] 1. task one
   [✓] 2. task two
@@ -73,6 +103,13 @@ export default function Home() {
           />
         </div>
       </main>
+
+      <ProjectModal
+        isOpen={modalState.isOpen}
+        onClose={() => setModalState({ ...modalState, isOpen: false })}
+        title={modalState.title}
+        buttons={modalState.buttons}
+      />
     </div>
   );
 }
