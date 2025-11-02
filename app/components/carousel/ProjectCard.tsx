@@ -27,7 +27,7 @@ export default function ProjectCard({
         className={`w-full ${imageHeight} bg-zinc-100 dark:bg-zinc-900 flex items-center justify-center cursor-pointer`}
       >
         {asciiArt ? (
-          <pre className="text-[8px] leading-[0.9] text-green-600 dark:text-green-400 font-mono whitespace-pre overflow-hidden flex items-center justify-center p-2">
+          <pre className="text-[8px] leading-[0.9] text-green-600 dark:text-green-400 font-mono whitespace-pre overflow-hidden flex items-center justify-center w-full h-full p-2">
             {asciiArt}
           </pre>
         ) : imageUrl ? (
