@@ -2,8 +2,8 @@ import fs from 'fs';
 import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
+import rehypeRaw from 'rehype-raw';
 import Link from 'next/link';
-import './blog-styles.css';
 
 export default function TodoProjectBlog() {
   const markdownPath = path.join(process.cwd(), 'app', 'blog', 'todo-project', 'blog_post.md');
@@ -41,7 +41,10 @@ export default function TodoProjectBlog() {
           prose-ul:my-6 prose-ul:space-y-2 prose-ol:my-6 prose-ol:space-y-2 prose-ul:list-disc prose-ol:list-decimal
           prose-hr:border-black/[.08] dark:prose-hr:border-white/[.145] prose-hr:my-12
         ">
-          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+          <ReactMarkdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+          >
             {markdownContent}
           </ReactMarkdown>
         </article>

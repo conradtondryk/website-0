@@ -1,14 +1,12 @@
-## **building a todo cli in rust**
+# building a todo cli in rust.
 
----
-
-## **why build another todo app**
+## why build another todo app.
 
 every developer has built a todo app at some point. it's the "hello world" of real applications—simple enough to finish, complex enough to be useful. when learning rust, i wanted a project that would teach me about the ecosystem, error handling, and how to write clean, idiomatic code.
 
 ---
 
-## **what it does**
+## what it does.
 
 a minimal command-line tool for managing tasks. three commands, zero configuration:
 
@@ -22,7 +20,7 @@ tasks persist to json and include timestamps. that's it. no databases, no web se
 
 ---
 
-## **the stack**
+## the stack.
 
 **clap** — command-line parsing with derive macros
 **serde + serde_json** — data serialization
@@ -31,7 +29,7 @@ tasks persist to json and include timestamps. that's it. no databases, no web se
 
 ---
 
-## **the journey**
+## the journey.
 
 the git history tells the real story: 20+ commits of relentless refactoring. from working-but-messy to clean-and-simple. the process went like this:
 
@@ -44,11 +42,13 @@ sometimes the best code is the code you delete.
 
 ---
 
-## **the interesting bits**
+## the interesting bits.
 
-### **→ smart file loading**
+### → smart file loading.
 
 the first-run experience matters. instead of crashing when `list.json` doesn't exist, the app gracefully initializes with an empty list:
+
+<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #0366d6; margin: 20px 0;">
 
 ```rust
 fn load() -> Result<Self> {
@@ -60,11 +60,15 @@ fn load() -> Result<Self> {
 }
 ```
 
+</div>
+
 this pattern handles three cases: successful load, missing file, and actual errors. no crashes, no confusing messages for new users.
 
-### **→ the command handler**
+### → the command handler.
 
 early versions had scattered logic with repeated patterns. the final version centralizes everything in one clean handler:
+
+<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #22863a; margin: 20px 0;">
 
 ```rust
 impl Command {
@@ -89,11 +93,15 @@ impl Command {
 }
 ```
 
+</div>
+
 load → execute → save. the pattern is obvious. the `?` operator handles errors. the compiler ensures every command is handled. this is what good rust looks like.
 
-### **→ validation that fails fast**
+### → validation that fails fast.
 
 better to catch mistakes immediately than persist bad data:
+
+<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #d73a49; margin: 20px 0;">
 
 ```rust
 fn add(&mut self, name: &str) -> Result<()> {
@@ -109,11 +117,13 @@ fn add(&mut self, name: &str) -> Result<()> {
 }
 ```
 
+</div>
+
 the `bail!` macro from anyhow makes early returns clean. no pyramids of if-statements, no result wrapping ceremonies.
 
 ---
 
-## **what i learned**
+## what i learned.
 
 - refactoring is more valuable than getting it right the first time. the messy working version taught me what the clean version should look like.
 - rust's type system catches so many bugs at compile time. the exhaustive match on commands means i can't forget to handle a case.
@@ -127,7 +137,7 @@ the `bail!` macro from anyhow makes early returns clean. no pyramids of if-state
 
 ---
 
-## **final thoughts**
+## final thoughts.
 
 good software isn't about adding features—it's about removing everything that doesn't need to exist. this project started messy and became simple through careful refactoring.
 
