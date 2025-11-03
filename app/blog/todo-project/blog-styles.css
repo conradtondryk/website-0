@@ -1,7 +1,14 @@
+.blog-content {
+  max-width: 100% !important;
+  overflow-x: hidden !important;
+}
+
 .blog-content pre {
   margin-top: 2rem !important;
   margin-bottom: 2rem !important;
   background: #f6f8fa !important;
+  max-width: 100% !important;
+  overflow-x: auto !important;
 }
 
 .dark .blog-content pre {
@@ -11,6 +18,12 @@
 .blog-content pre code {
   font-size: 0.75rem !important;
   line-height: 1.5 !important;
+}
+
+.blog-content div[style*="background-color"] {
+  max-width: 100% !important;
+  overflow-x: auto !important;
+  box-sizing: border-box !important;
 }
 
 .blog-content h2 {
@@ -31,4 +44,13 @@
 .blog-content hr {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
+}
+
+.blog-content ul {
+  padding-left: 1.5rem !important;
+  list-style-type: disc !important;
+}
+
+.blog-content li {
+  display: list-item !important;
 }
