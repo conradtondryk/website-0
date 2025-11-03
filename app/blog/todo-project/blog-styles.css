@@ -1,11 +1,9 @@
-.blog-content pre:nth-of-type(1) {
-  border-left: 4px solid #0366d6;
+.blog-content pre {
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  background: #f6f8fa !important;
 }
 
-.blog-content pre:nth-of-type(2) {
-  border-left: 4px solid #22863a;
-}
-
-.blog-content pre:nth-of-type(3) {
-  border-left: 4px solid #d73a49;
+.dark .blog-content pre {
+  background: #161b22 !important;
 }

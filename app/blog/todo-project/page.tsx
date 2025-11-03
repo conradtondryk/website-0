@@ -33,8 +33,6 @@ export default function TodoProjectBlog() {
           prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:text-amber-900 dark:prose-code:text-amber-200
           prose-code:font-mono prose-code:before:content-[''] prose-code:after:content-['']
           prose-code:border prose-code:border-amber-200/50 dark:prose-code:border-amber-800/50
-          prose-pre:bg-gradient-to-br prose-pre:from-slate-50 prose-pre:to-zinc-100
-          prose-pre:dark:from-zinc-900 prose-pre:dark:to-slate-900
           prose-pre:text-black dark:prose-pre:text-white
           prose-pre:border prose-pre:border-slate-200 prose-pre:dark:border-zinc-700
           prose-pre:p-6 prose-pre:my-8 prose-pre:rounded-xl prose-pre:overflow-x-auto prose-pre:shadow-sm
