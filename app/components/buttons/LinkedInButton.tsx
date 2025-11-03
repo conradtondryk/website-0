@@ -4,11 +4,11 @@ export default function LinkedInButton({ href }: { href: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="flex h-12 w-12 items-center justify-center rounded-full border border-solid border-black/[.08] transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
+      className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-solid border-black/[.08] transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
       aria-label="LinkedIn"
     >
       <svg
-        className="h-5 w-5 text-black dark:text-white"
+        className="h-4 w-4 sm:h-5 sm:w-5 text-black dark:text-white"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
