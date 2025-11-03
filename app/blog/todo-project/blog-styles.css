@@ -26,6 +26,11 @@
   box-sizing: border-box !important;
 }
 
+.dark .blog-content div[style*="background-color"] {
+  background-color: #161b22 !important;
+  border-left-color: #30363d !important;
+}
+
 .blog-content h2 {
   margin-top: 0.56rem !important;
   margin-bottom: 0.56rem !important;
