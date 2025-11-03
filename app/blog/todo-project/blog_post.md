@@ -43,10 +43,10 @@ tasks persist to json and include timestamps. that's it. no databases, no web se
 
 the git history tells the real story: 20+ commits of relentless refactoring. from working-but-messy to clean-and-simple. the process went like this:
 
-**build it** → make it work with basic functionality
-**clean it** → remove loops, clones, and redundant code
-**refactor it** → extract methods, improve structure, add proper errors
-**polish it** → simplify, remove features, make it elegant
+- **build it** → make it work with basic functionality
+- **clean it** → remove loops, clones, and redundant code
+- **refactor it** → extract methods, improve structure, add proper errors
+- **polish it** → simplify, remove features, make it elegant
 
 sometimes the best code is the code you delete.
 
