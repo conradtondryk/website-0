@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <div className="flex h-dvh sm:min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex h-full w-full max-w-3xl flex-col justify-between gap-4 py-6 px-6 sm:gap-0 sm:py-8 sm:px-16 sm:min-h-screen sm:justify-start bg-white dark:bg-black">
+      <main className="flex h-full w-full max-w-3xl flex-col justify-evenly px-6 sm:gap-0 sm:py-8 sm:px-16 sm:min-h-screen sm:justify-start bg-white dark:bg-black">
         <div className="flex flex-col items-center sm:items-start flex-shrink-0">
           <SocialButtons
             githubUrl="https://github.com/conradtondryk"
