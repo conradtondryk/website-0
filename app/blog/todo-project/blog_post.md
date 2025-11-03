@@ -48,8 +48,6 @@ sometimes the best code is the code you delete.
 
 the first-run experience matters. instead of crashing when `list.json` doesn't exist, the app gracefully initializes with an empty list:
 
-<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #0366d6; margin: 20px 0;">
-
 ```rust
 fn load() -> Result<Self> {
     match fs::read_to_string("list.json") {
@@ -60,15 +58,11 @@ fn load() -> Result<Self> {
 }
 ```
 
-</div>
-
 this pattern handles three cases: successful load, missing file, and actual errors. no crashes, no confusing messages for new users.
 
 ### → the command handler.
 
 early versions had scattered logic with repeated patterns. the final version centralizes everything in one clean handler:
-
-<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #22863a; margin: 20px 0;">
 
 ```rust
 impl Command {
@@ -93,15 +87,11 @@ impl Command {
 }
 ```
 
-</div>
-
 load → execute → save. the pattern is obvious. the `?` operator handles errors. the compiler ensures every command is handled. this is what good rust looks like.
 
 ### → validation that fails fast.
 
 better to catch mistakes immediately than persist bad data:
-
-<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #d73a49; margin: 20px 0;">
 
 ```rust
 fn add(&mut self, name: &str) -> Result<()> {
@@ -116,8 +106,6 @@ fn add(&mut self, name: &str) -> Result<()> {
     Ok(())
 }
 ```
-
-</div>
 
 the `bail!` macro from anyhow makes early returns clean. no pyramids of if-statements, no result wrapping ceremonies.
 

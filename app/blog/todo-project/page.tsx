@@ -3,6 +3,7 @@ import path from 'path';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
+import './blog-styles.css';
 
 export default function TodoProjectBlog() {
   const markdownPath = path.join(process.cwd(), 'app', 'blog', 'todo-project', 'blog_post.md');
@@ -21,7 +22,7 @@ export default function TodoProjectBlog() {
           <div className="w-full border-t border-black/[.08] dark:border-white/[.145] my-4"></div>
         </div>
 
-        <article className="prose prose-zinc dark:prose-invert max-w-none text-black dark:text-white
+        <article className="blog-content prose prose-zinc dark:prose-invert max-w-none text-black dark:text-white
           prose-headings:font-semibold prose-headings:text-black dark:prose-headings:text-white
           prose-h1:text-4xl prose-h1:mb-8 prose-h1:mt-0 prose-h1:leading-tight
           prose-h2:text-3xl prose-h2:mb-6 prose-h2:mt-12 prose-h2:pb-3 prose-h2:border-b prose-h2:border-black/[.08] dark:prose-h2:border-white/[.145]
