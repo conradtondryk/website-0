@@ -14,11 +14,15 @@ every developer has built a todo app at some point. it's the "hello world" of re
 
 a minimal command-line tool for managing tasks. three commands, zero configuration:
 
+<div class="code-block code-block-purple">
+
 ```
 todo add "buy groceries"
 todo view
 todo remove 1
 ```
+
+</div>
 
 tasks persist to json and include timestamps. that's it. no databases, no web servers, no bloat.
 
@@ -56,7 +60,7 @@ sometimes the best code is the code you delete.
 
 the first-run experience matters. instead of crashing when `list.json` doesn't exist, the app gracefully initializes with an empty list:
 
-<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #0366d6; margin: 20px 0;">
+<div class="code-block code-block-blue">
 
 ```rust
 fn load() -> Result<Self> {
@@ -77,7 +81,7 @@ this pattern handles three cases: successful load, missing file, and actual erro
 
 early versions had scattered logic with repeated patterns. the final version centralizes everything in one clean handler:
 
-<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #22863a; margin: 20px 0;">
+<div class="code-block code-block-green">
 
 ```rust
 impl Command {
@@ -111,7 +115,7 @@ load → execute → save. the pattern is obvious. the `?` operator handles erro
 
 better to catch mistakes immediately than persist bad data:
 
-<div style="background-color: #f6f8fa; padding: 16px; border-radius: 6px; border-left: 4px solid #d73a49; margin: 20px 0;">
+<div class="code-block code-block-red">
 
 ```rust
 fn add(&mut self, name: &str) -> Result<()> {

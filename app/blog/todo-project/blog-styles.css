@@ -28,7 +28,53 @@
 
 .dark .blog-content div[style*="background-color"] {
   background-color: #161b22 !important;
-  border-left-color: #30363d !important;
+}
+
+/* Code block variants with colored borders */
+.code-block {
+  background-color: #f6f8fa;
+  padding: 16px;
+  border-radius: 6px;
+  margin: 20px 0;
+  max-width: 100%;
+  overflow-x: auto;
+  box-sizing: border-box;
+}
+
+.dark .code-block {
+  background-color: #161b22;
+}
+
+.code-block-purple {
+  border-left: 4px solid #8b5cf6;
+}
+
+.dark .code-block-purple {
+  border-left-color: #a78bfa;
+}
+
+.code-block-blue {
+  border-left: 4px solid #0366d6;
+}
+
+.dark .code-block-blue {
+  border-left-color: #3b82f6;
+}
+
+.code-block-green {
+  border-left: 4px solid #22863a;
+}
+
+.dark .code-block-green {
+  border-left-color: #10b981;
+}
+
+.code-block-red {
+  border-left: 4px solid #d73a49;
+}
+
+.dark .code-block-red {
+  border-left-color: #ef4444;
 }
 
 .blog-content h2 {
