@@ -5,7 +5,7 @@ import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 
 export default function TodoProjectBlog() {
-  const markdownPath = path.join(process.cwd(), 'public', 'blog_post.md');
+  const markdownPath = path.join(process.cwd(), 'app', 'blog', 'todo-project', 'blog_post.md');
   const markdownContent = fs.readFileSync(markdownPath, 'utf-8');
 
   return (
