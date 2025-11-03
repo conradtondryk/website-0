@@ -37,6 +37,12 @@ export default function TodoProjectBlog() {
             </svg>
           </Link>
 
+          <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
+            <span className="text-lg font-semibold text-black dark:text-white">
+              ctondryk.dev
+            </span>
+          </div>
+
           <div className="flex items-center gap-3">
             <a
               href="https://github.com/conradtondryk/todo-project"

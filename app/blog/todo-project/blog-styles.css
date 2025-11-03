@@ -59,3 +59,10 @@
 .blog-content li {
   display: list-item !important;
 }
+
+.blog-content h2:first-of-type {
+  font-size: 2.4375rem !important;
+  text-decoration: underline !important;
+  text-underline-offset: 0.3em !important;
+  text-decoration-thickness: 2px !important;
+}
