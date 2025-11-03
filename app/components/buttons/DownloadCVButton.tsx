@@ -3,11 +3,11 @@ export default function DownloadCVButton({ href }: { href: string }) {
     <a
       href={href}
       download
-      className="flex h-10 w-10 sm:h-12 sm:w-12 items-center justify-center rounded-full border border-solid border-black/[.08] transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
+      className="flex h-12 w-12 items-center justify-center rounded-full border border-solid border-black/[.08] transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
       aria-label="Download CV"
     >
       <svg
-        className="h-4 w-4 sm:h-5 sm:w-5 text-black dark:text-white"
+        className="h-5 w-5 text-black dark:text-white"
         fill="none"
         stroke="currentColor"
         strokeWidth="2"

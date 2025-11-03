@@ -20,7 +20,7 @@ export default function SocialButtons({
   cvUrl = '',
 }: SocialButtonsProps) {
   return (
-    <div className="flex gap-2 sm:gap-4 items-center justify-center sm:justify-start">
+    <div className="flex gap-4 items-center justify-center sm:justify-start">
       <GithubButton href={githubUrl} />
       <LinkedInButton href={linkedInUrl} />
       <EmailButton href={emailUrl} />
