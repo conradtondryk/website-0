@@ -7,3 +7,28 @@
 .dark .blog-content pre {
   background: #161b22 !important;
 }
+
+.blog-content pre code {
+  font-size: 0.75rem !important;
+  line-height: 1.5 !important;
+}
+
+.blog-content h2 {
+  margin-top: 0.56rem !important;
+  margin-bottom: 0.56rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.blog-content h3 {
+  margin-top: 0.45rem !important;
+  margin-bottom: 0.45rem !important;
+}
+
+.blog-content p {
+  margin-bottom: 1.5rem !important;
+}
+
+.blog-content hr {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}

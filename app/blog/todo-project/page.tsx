@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import Link from 'next/link';
+import './blog-styles.css';
 
 export default function TodoProjectBlog() {
   const markdownPath = path.join(process.cwd(), 'app', 'blog', 'todo-project', 'blog_post.md');
