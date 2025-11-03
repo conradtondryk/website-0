@@ -4,6 +4,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeRaw from 'rehype-raw';
 import Link from 'next/link';
+import ThemeToggleButton from '@/app/components/buttons/ThemeToggleButton';
 import './blog-styles.css';
 
 export default function TodoProjectBlog() {
@@ -12,7 +13,11 @@ export default function TodoProjectBlog() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      {/* Sticky GitHub Button */}
+      {/* Sticky Buttons */}
+      <div className="fixed top-6 left-6 z-50">
+        <ThemeToggleButton />
+      </div>
+
       <a
         href="https://github.com/conradtondryk/todo-project"
         target="_blank"
