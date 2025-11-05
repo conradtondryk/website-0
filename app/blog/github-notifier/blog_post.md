@@ -39,12 +39,15 @@ no servers, no polling, no configuration beyond secrets. github actions handles 
 
 
 **original approach:**
+
 - **rust + axum** — webhook server
 - **teloxide** — telegram bot library
-- **hmac + sha2** — github webhook signature verification
 - **fly.io** — would've hosted it here
 
+<br>
+
 **final approach:**
+
 - **github actions** — workflow automation
 - **bash + curl** — telegram api calls
 - **jq** — json parsing in workflows
@@ -57,7 +60,7 @@ no servers, no polling, no configuration beyond secrets. github actions handles 
 this started as a proper rust service. webhook server, signature verification, proper error handling. looked good, worked well locally. then reality hit: i'd need a vps running 24/7 for a notification bot.
 
 - **build it** → rust webhook server with axum and teloxide
-- **realize** → this needs constant hosting for intermittent notifications
+- **realize** → this needs constant hosting for notifications
 - **pivot** → delete everything, use github actions instead
 - **refine** → fix markdown escaping, add commit links, make messages useful
 
