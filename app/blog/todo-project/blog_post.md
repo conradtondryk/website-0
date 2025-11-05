@@ -31,10 +31,10 @@ tasks persist to json and include timestamps. that's it. no databases, no web se
 ## **the stack.**
 
 
-**clap** — command-line parsing with derive macros
-**serde + serde_json** — data serialization
-**chrono** — timestamp handling
-**anyhow** — error handling that doesn't make you cry
+- **clap** — command-line parsing with derive macros
+- **serde + serde_json** — data serialization
+- **chrono** — timestamp handling
+- **anyhow** — error handling that doesn't make you cry
 
 ---
 
