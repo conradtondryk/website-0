@@ -32,9 +32,12 @@ export const metadata: Metadata = {
     },
   },
   icons: {
-    icon: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
-    shortcut: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/oaktree.svg", type: "image/svg+xml" }],
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/oaktree.svg", type: "image/svg+xml" }
+    ],
+    shortcut: ["/icon.png"],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
   },
   openGraph: {
     title: "conrad tondryk",
