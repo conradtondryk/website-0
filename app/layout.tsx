@@ -45,9 +45,10 @@ export const metadata: Metadata = {
     url: 'https://ctondryk.dev',
     siteName: "conrad tondryk",
     images: [{
-      url: '/preview.jpg',
+      url: 'https://ctondryk.dev/preview.jpg',
       width: 1200,
       height: 630,
+      alt: "conrad tondryk's personal website",
     }],
     type: 'website',
     locale: 'en_US',
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "conrad tondryk",
     description: "conrad tondryk's personal website",
-    images: ['/preview.jpg'],
+    images: ['https://ctondryk.dev/preview.jpg'],
   },
 };
 
