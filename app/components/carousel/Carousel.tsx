@@ -112,7 +112,7 @@ export default function Carousel({
       {showLeftArrow && (
         <button
           onClick={() => scroll('left')}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
+          className="absolute -left-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
           aria-label="Scroll left"
         >
           <svg
@@ -152,7 +152,7 @@ export default function Carousel({
       {showRightArrow && (
         <button
           onClick={() => scroll('right')}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
+          className="absolute -right-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
           aria-label="Scroll right"
         >
           <svg
