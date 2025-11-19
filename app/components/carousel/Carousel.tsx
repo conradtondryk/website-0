@@ -109,12 +109,13 @@ export default function Carousel({
 
   return (
     <div className={`${width} relative`}>
-      {showLeftArrow && (
-        <button
-          onClick={() => scroll('left')}
-          className="absolute -left-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
-          aria-label="Scroll left"
-        >
+      <button
+        onClick={() => scroll('left')}
+        className={`absolute -left-8 sm:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-300 ${
+          showLeftArrow ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        aria-label="Scroll left"
+      >
           <svg
             className="w-5 h-5 dark:invert"
             fill="none"
@@ -125,8 +126,7 @@ export default function Carousel({
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
           </svg>
-        </button>
-      )}
+      </button>
 
       <div
         ref={scrollContainerRef}
@@ -149,12 +149,13 @@ export default function Carousel({
         ))}
       </div>
 
-      {showRightArrow && (
-        <button
-          onClick={() => scroll('right')}
-          className="absolute -right-14 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-colors"
-          aria-label="Scroll right"
-        >
+      <button
+        onClick={() => scroll('right')}
+        className={`absolute -right-8 sm:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-300 ${
+          showRightArrow ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+        }`}
+        aria-label="Scroll right"
+      >
           <svg
             className="w-5 h-5 dark:invert"
             fill="none"
@@ -165,8 +166,7 @@ export default function Carousel({
           >
             <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
           </svg>
-        </button>
-      )}
+      </button>
 
       <style jsx>{`
         .scrollbar-hide::-webkit-scrollbar {
