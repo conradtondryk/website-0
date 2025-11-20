@@ -28,20 +28,33 @@ export default function Carousel({
       const cards = Array.from(container.children) as HTMLElement[];
       if (cards.length === 0) return;
 
-      const cardWidth = cards[0].offsetWidth;
-      const gap = 16; // gap-4 = 16px
-      const containerWidth = container.offsetWidth;
+      const containerWidth = container.clientWidth;
+      const scrollLeft = container.scrollLeft;
+      const containerCenter = scrollLeft + containerWidth / 2;
 
-      // Find the currently centered card (or closest to center)
-      const containerCenter = container.scrollLeft + containerWidth / 2;
+      // Find the currently visible/centered card
       let currentCardIndex = 0;
+      let minDistance = Infinity;
 
       for (let i = 0; i < cards.length; i++) {
-        const cardLeft = cards[i].offsetLeft;
+        const card = cards[i];
+        const cardLeft = card.offsetLeft;
+        const cardWidth = card.offsetWidth;
+        const cardRight = cardLeft + cardWidth;
         const cardCenter = cardLeft + cardWidth / 2;
-        if (Math.abs(cardCenter - containerCenter) < cardWidth / 2 + gap) {
+        
+        // Calculate distance from container center
+        const distance = Math.abs(cardCenter - containerCenter);
+        
+        // Prefer cards that are at least partially visible
+        const isVisible = cardRight > scrollLeft && cardLeft < scrollLeft + containerWidth;
+        
+        if (isVisible && distance < minDistance) {
+          minDistance = distance;
           currentCardIndex = i;
-          break;
+        } else if (!isVisible && distance < minDistance) {
+          minDistance = distance;
+          currentCardIndex = i;
         }
       }
 
@@ -50,14 +63,12 @@ export default function Carousel({
         ? Math.max(0, currentCardIndex - 1)
         : Math.min(cards.length - 1, currentCardIndex + 1);
 
-      // Calculate scroll position to center the target card
+      // Use scrollIntoView for reliable centering, especially on mobile
       const targetCard = cards[targetIndex];
-      const targetCardLeft = targetCard.offsetLeft;
-      const targetScrollLeft = targetCardLeft - (containerWidth / 2) + (cardWidth / 2);
-
-      container.scrollTo({
-        left: targetScrollLeft,
+      targetCard.scrollIntoView({
         behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
       });
     }
   };
