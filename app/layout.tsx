@@ -33,11 +33,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: "/icon.png", type: "image/png" },
-      { url: "/oaktree.svg", type: "image/svg+xml" }
+      { url: "/oaktree.svg", type: "image/svg+xml" },
+      { url: "/icon-32.png", type: "image/png", sizes: "32x32" },
+      { url: "/icon-192.png", type: "image/png", sizes: "192x192" }
     ],
-    shortcut: ["/icon.png"],
-    apple: [{ url: "/apple-icon.png", type: "image/png" }],
+    shortcut: ["/icon-32.png"],
+    apple: [{ url: "/apple-touch-icon.png" }],
   },
   openGraph: {
     title: "conrad tondryk",
