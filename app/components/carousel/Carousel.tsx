@@ -122,7 +122,7 @@ export default function Carousel({
     <div className={`${width} relative`}>
       <button
         onClick={() => scroll('left')}
-        className={`absolute -left-8 sm:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-300 ${
+        className={`absolute left-2 sm:-left-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-300 ${
           showLeftArrow ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-label="Scroll left"
@@ -162,7 +162,7 @@ export default function Carousel({
 
       <button
         onClick={() => scroll('right')}
-        className={`absolute -right-8 sm:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-300 ${
+        className={`absolute right-2 sm:-right-12 top-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-full bg-white dark:bg-black border border-black/[.08] dark:border-white/[.145] flex items-center justify-center shadow-lg hover:bg-zinc-50 dark:hover:bg-zinc-900 transition-all duration-300 ${
           showRightArrow ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         aria-label="Scroll right"
